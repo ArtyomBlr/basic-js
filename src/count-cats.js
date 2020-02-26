@@ -1,4 +1,14 @@
-module.exports = function countCats(/* matrix */) {
+module.exports = function countCats(backyard) {
   throw 'Not implemented';
-  // remove line with error and write your code here
-};
+  var a = [];
+  backyard.forEach(function(index, array){
+    if(array[index] !== '^^') {
+      return 0;
+    } else if(array[index] === '^^') {
+      a.push(array[index]);
+      return a.length;
+    };
+  });
+    
+  };
+
