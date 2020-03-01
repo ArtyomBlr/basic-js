@@ -1,10 +1,7 @@
-module.exports = function getSeason(/* date */) {
-  throw 'Not implemented';
-  // remove line with error and write your code here
+module.exports = function getSeason(date) {
     if(!date){
         return 'Unable to determine the time of year!';
     }
-
     let month = date.getUTCMonth();
     if(month == 11 || month < 2){
         return 'winter';
@@ -15,5 +12,4 @@ module.exports = function getSeason(/* date */) {
     } else if(month <= 10 && month >= 8){
         return 'autumn';
     }
-  
 };
