@@ -9,7 +9,7 @@ module.exports = function transform(arr) {
         } else if (arr[i] == '--discard-prev') {
             if (i > 0) newArr.pop();
         } else if (arr[i] == '--double-next') {
-            newArr.push(arr[i + 1]);
+            if (i + 1 < arr.length) newArr.push(arr[i + 1]);
         } else if (arr[i] == '--double-prev') {
             if (i > 0) newArr.push(arr[i - 1]);
         } else {
